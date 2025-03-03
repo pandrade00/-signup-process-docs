@@ -1,29 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trails-challenge-2</title>
+
+    <title>Document</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <!-- endereço da fonte poppins no google fonte  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>desafio 2</h1>
-    <section>
-        <div>
-            <h1>DESAFIO 2 TRILHAS RUAN E PEDRO</h1>
-        </div>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required><br><br>
-          
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required><br><br>
-          
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required><br><br>
-          
-            <input type="submit" value="Enviar">
-          </form>
-          
-    </section>
+    <main class="principal">
+        <section class="titulo-inicio">
+            <a href="">Voltar</a>
+            <h1 class="h1">Formulário de inscrição</h1>
+            <p class="p1">Prencha os dados abaixo para fazer sua inscrição no programa Trilhas</p>
+        </section>
+
+        <section class="participante">
+            <h3 class="h3">Informações do participante</h2>
+                <!-- campos de entradas com nome, data de nasciment, cpf , sexo, email, telefone, documento de indetidade -->
+        </section>
+
+        <section class="endereço">
+            <h3 class="h3" id="titulo-endereco"></h3>
+            <!-- campos de entradas com cep, rua,  cidade , numero, estado, comprovante de residncia -->
+            <div class="mb-4">
+                <label for="exampleFormControlCep" class="form-label text-muted  mb-1" id="label-1"></label>
+                <input type="text" class="form-control bg-secondary bg-opacity-25 form-control-lg w-100" id="entrada-1" maxlength="10">
+            </div>
+            <div class="mb-3 row ">
+                <div class="col-8 d-flex">
+                    <div class="flex-grow-1">
+                        <label for="exampleFormControlCep" class="form-label text-muted  mb-1" id="label-2"></label>
+                        <input type="text" class="form-control  bg-secondary bg-opacity-25 form-control-lg w-75"
+                            id="entrada-2" maxlength="50">
+                    </div>
+                </div>
+                <div class="col-4 d-flex">
+                    <div class="flex-grow-1">
+                        <label for="exampleFormControlCep" class="form-label text-muted  mb-1" id="label-3"></label>
+                        <input type="text" class="form-control  bg-secondary bg-opacity-25 form-control-lg w-50" id="entrada-3"
+                            maxlength="50">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row ">
+                <div class="col-8 d-flex">
+                    <div class="flex-grow-1">
+                        <label for="ruaDisabled" class="form-label text-muted  mb-1" id="label-4"></label>
+                        <input type="text" class="form-control  bg-secondary bg-opacity-25 form-control-lg w-75"
+                            id="entrada-4" maxlength="50">
+                    </div>
+                </div>
+                <div class="mb-4 col-4 d-flex">
+                    <div class="flex-grow-1">
+                        <label for="numeroDisabled" class="form-label text-muted  mb-1" id="label-5"></label>
+                        <input type="text" class="form-control bg-secondary bg-opacity-25 form-control-lg w-50"
+                            id="entrada-5" maxlength="50">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="customFile" class="form-label">Comprovante de Residência</label>
+            
+                <div class="d-flex flex-column align-items-center justify-content-center border border-2 rounded  p-4 w-100 border-dashed file-upload-area"
+                onclick="selecionarArquivo()">
+
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.4776 9.01106C17.485 9.01102 17.4925 9.01101 17.5 9.01101C19.9853 9.01101 22 11.0294 22 13.5193C22 15.8398 20.25 17.7508 18 18M17.4776 9.01106C17.4924 8.84606 17.5 8.67896 17.5 8.51009C17.5 5.46695 15.0376 3 12 3C9.12324 3 6.76233 5.21267 6.52042 8.03192M17.4776 9.01106C17.3753 10.1476 16.9286 11.1846 16.2428 12.0165M6.52042 8.03192C3.98398 8.27373 2 10.4139 2 13.0183C2 15.4417 3.71776 17.4632 6 17.9273M6.52042 8.03192C6.67826 8.01687 6.83823 8.00917 7 8.00917C8.12582 8.00917 9.16474 8.38194 10.0005 9.01101" stroke="#8F8881" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 13V21M12 13C11.2998 13 9.99153 14.9943 9.5 15.5M12 13C12.7002 13 14.0085 14.9943 14.5 15.5" stroke="#8F8881" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <!-- Texto abaixo do ícone -->
+                    <span class="text-muted mt-2" id="file-name">Clique aqui para selecionar o arquivo</span>
+                </div>
+                
+                <input type="file" id="file-input" class="d-none">
+            </div>
+        </section>
+
+        <section class="trilhas">
+            <!-- Programação front , back,jogos, ux, ciencia de dados -->
+        </section>
+        <section class="seguranca">
+            <p>declaro que li e concordo com os <strong>Termos e Condições</strong> e com a <strong>Politica de
+                    privacidade</strong></p>
+
+            <!-- botão de cancelaj e fazer a inscrição -->
+        </section>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./app.js"></script>
+    </main>
 </body>
+
 </html>
