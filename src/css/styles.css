@@ -5,25 +5,25 @@ body {
     background-color: #E7E5E4;
 }
 
-.principal {
+  .main-principal {
     background-color: #FFFFFF;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
-    justify-content: center;
-}
+    justify-content: center; 
+    /* margin-left: 100px; */
+}   
 
 .h1 {
-    size: 32px;
+    font-size: 32px;
     line-height: 120%;
     font-weight: bold;
 }
 
 .h3 {
-    size: 20px;
+    font-size: 20px;
     line-height: 120%;
     font-weight: bold;
-
 }
 
 .border-dashed {
@@ -33,3 +33,19 @@ body {
 .file-upload-area {
     cursor: pointer;
 }
+.image-ilustracao{
+    background-color: blue;
+    margin-left: 50px;
+
+}
+/* style para seção trilhas */
+
+/* .trilhas{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: left;
+    justify-content: left;
+
+} */
+

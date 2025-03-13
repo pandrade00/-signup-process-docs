@@ -50,3 +50,8 @@ alterarCor(2);
 alterarCor(3);
 alterarCor(4);
 alterarCor(5);
+
+//lógica e DOM do section trilhas 
+let tituloTrilhas = document.getElementById("titulo-Trilhas");
+tituloTrilhas.textContent = "Trilhas de Aprendizagem";
+
