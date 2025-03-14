@@ -2,15 +2,15 @@
 
 let tituloEndereco = document.getElementById("titulo-endereco");
 tituloEndereco.textContent = "Endereço residencial";
-let cep = document.getElementById("label-1");
+let cep = document.getElementById("label-cep");
 cep.textContent = "CEP";
-let rua = document.getElementById("label-2");
+let rua = document.getElementById("label-rua");
 rua.textContent = "Rua";
-let numero = document.getElementById("label-3");
+let numero = document.getElementById("label-numero");
 numero.textContent = "Número";
-let cidade =  document.getElementById("label-4");
+let cidade =  document.getElementById("label-cidade");
 cidade.textContent = "Cidade";
-let estado =  document.getElementById("label-5");
+let estado =  document.getElementById("label-estado");
 estado.textContent = "Estado";  
 
 //selecionar o arquivo
@@ -41,6 +41,8 @@ function alterarCor(id){
         if (!entrada.value) {
             entrada.classList.remove('bg-light');
             entrada.classList.add('bg-secondary', 'bg-opacity-25');
+        }else {
+            console.error(`Elemento com id entrada-${id} não encontrado!`);
         }
     });
 }
@@ -50,3 +52,18 @@ alterarCor(2);
 alterarCor(3);
 alterarCor(4);
 alterarCor(5);
+alterarCor(6);
+alterarCor(7);
+alterarCor(8);
+alterarCor(9);
+alterarCor(10);
+alterarCor(11);
+
+
+
+
+
+
+//lógica e DOM do section trilhas 
+let tituloTrilhas = document.getElementById("title-trilhas");
+tituloTrilhas.textContent = "Trilhas de Aprendizagem";
