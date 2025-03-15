@@ -70,7 +70,7 @@ const cpfInput = document.getElementById('entrada-3');
 const telefoneRegex = /^\(?\d{2}\)?[\s-]?\d{4,5}[-]?\d{4}$/;
 const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
 
-    cpfInput.addEventListener('chang', function (e) {
+    cpfInput.addEventListener('change', function (e) {
         let value = e.target.value.replace(/\D/g, ""); // Remove tudo que não for número
         
         if (value.length > 11) {
