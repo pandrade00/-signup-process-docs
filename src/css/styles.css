@@ -3,16 +3,23 @@
 body {
     font-family: Poppins;
     background-color: #E7E5E4;
+    width: 100%;
+    display: flex;
 }
 
-  .main-principal {
+.main-principal {
     background-color: #FFFFFF;
     display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: center; 
-    /* margin-left: 100px; */
-}   
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.section-principal{
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 100px;
+}
 
 .h1 {
     font-size: 32px;
@@ -28,25 +35,35 @@ body {
 
 .border-dashed {
     border-style: dashed !important;
- 
 }
+
 .file-upload-area {
     cursor: pointer;
 }
-.image-ilustracao{
-    background-color: blue;
-    margin-left: 50px;
 
+.image-ilustracao {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    flex-direction: column;  
+    align-items: center;  
 }
 
-/* style para seção trilhas */
+.ilustracao{
+    width: 400px;
+    height: 400px;
+}
 
-/* .trilhas{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: left;
-    justify-content: left;
+.logo-trilhas{
+    width: 200px;
+}
+@media (max-width: 450px) {
+    .image-ilustracao {
+        display: none;
+    }
 
-} */
-
+    .section-principal{
+        padding: 50px;
+    }
+}
