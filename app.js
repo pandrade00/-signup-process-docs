@@ -64,24 +64,32 @@ alterarCor(11);
 let tituloTrilhas = document.getElementById("title-trilhas");
 tituloTrilhas.textContent = "Trilhas de Aprendizagem";
 
-const telefoneInput = document.getElementById('entrada-6');
-const cpfInput = document.getElementById('entrada-3');
 
-const telefoneRegex = /^\(?\d{2}\)?[\s-]?\d{4,5}[-]?\d{4}$/;
-const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+function validador(){
+    let telefoneInput = document.getElementById('entrada-6');
+    let cpfInput = document.getElementById('entrada-3');
 
-    cpfInput.addEventListener('change', function (e) {
-        let value = e.target.value.replace(/\D/g, ""); // Remove tudo que não for número
-        
-        if (value.length > 11) {
-            value = value.slice(0, 11); // Limita a 11 caracteres
-        }
-        value = value.replace(/(\d{3})(\d)/, "$1.$2");
-        value = value.replace(/(\d{3})(\d)/, "$1.$2");
-        value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-        
-        e.target.value = value;
-    });
+cpfInput.addEventListener("input", function (e) {
+    let value = e.target.value;
+
+    // Remove caracteres não numéricos
+    value = value.replace(/\D/g, "");
+
+    // Formata o CPF corretamente
+    if (value.length <= 3) {
+        value = value.replace(/(\d{3})(\d{0,3})/, "$1.$2");
+    } else if (value.length <= 6) {
+        value = value.replace(/(\d{3})(\d{3})(\d{0,3})/, "$1.$2.$3");
+    } else if (value.length <= 9) {
+        value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, "$1.$2.$3-$4");
+    } else if (value.length === 11) {
+        value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+    }
+
+    // Atualiza o campo
+    e.target.value = value;
+});
+
 
     telefoneInput.addEventListener('input', function (e) {
         let value = e.target.value.replace(/\D/g, ""); // Remove tudo que não for número
@@ -94,3 +102,6 @@ const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
         
         e.target.value = value;
     });
+}
+
+validador();
