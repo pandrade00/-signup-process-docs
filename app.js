@@ -8,6 +8,10 @@ let rua = document.getElementById("label-rua");
 rua.textContent = "Rua";
 let numero = document.getElementById("label-numero");
 numero.textContent = "Número";
+let cidade =  document.getElementById("label-cidade");
+cidade.textContent = "Cidade";
+let estado =  document.getElementById("label-estado");
+estado.textContent = "Estado";  
 let cidade = document.getElementById("label-cidade");
 cidade.textContent = "Cidade";
 let estado = document.getElementById("label-estado");
@@ -60,13 +64,52 @@ alterarCor(10);
 alterarCor(11);
 
 
-
-
-
-
 //lógica e DOM do section trilhas 
 let tituloTrilhas = document.getElementById("title-trilhas");
 tituloTrilhas.textContent = "Trilhas de Aprendizagem";
+
+
+
+function validador(){
+    let telefoneInput = document.getElementById('entrada-6');
+    let cpfInput = document.getElementById('entrada-3');
+
+cpfInput.addEventListener("input", function (e) {
+    let value = e.target.value;
+
+    // Remove caracteres não numéricos
+    value = value.replace(/\D/g, "");
+
+    // Formata o CPF corretamente
+    if (value.length <= 3) {
+        value = value.replace(/(\d{3})(\d{0,3})/, "$1.$2");
+    } else if (value.length <= 6) {
+        value = value.replace(/(\d{3})(\d{3})(\d{0,3})/, "$1.$2.$3");
+    } else if (value.length <= 9) {
+        value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, "$1.$2.$3-$4");
+    } else if (value.length === 11) {
+        value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+    }
+
+    // Atualiza o campo
+    e.target.value = value;
+});
+
+
+    telefoneInput.addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, ""); // Remove tudo que não for número
+        
+        if (value.length > 11) {
+            value = value.slice(0, 11); // Limita a 11 caracteres (padrão Brasil: DDD + 9 dígitos)
+        }
+        
+        value = value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+        
+        e.target.value = value;
+    });
+}
+
+validador();
 
 // Seleciona a caixa de "Programação Front-end"
 function trilhasCheck() {
@@ -83,7 +126,3 @@ function trilhasCheck() {
 }
 
 trilhasCheck();
-
-
-
-  
