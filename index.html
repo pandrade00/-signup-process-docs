@@ -14,7 +14,7 @@
 
 <body>
 
-<main class="main-principal coonteiner">
+    <main class="main-principal coonteiner">
         <section class="section-principal">
             <section class="titulo-inicio mb-5">
 
@@ -101,9 +101,9 @@
                 <div class="mb-3">
                     <label for="entrada-7" class="form-label text-muted  mb-1" id="label-cep"></label>
                     <input type="text" class="form-control bg-secondary bg-opacity-25 form-control-lg w-100"
-                        id="entrada-7" maxlength="10">
+                        id="entrada-7" maxlength="8">
                 </div>
-                <div class="mb-3 row ">
+                <div class="mb-3 row">
                     <div class="col-8 d-flex">
                         <div class="flex-grow-1">
                             <label for="entrada-8" class="form-label text-muted  mb-1" id="label-rua"></label>
@@ -115,7 +115,7 @@
                         <div class="flex-grow-1">
                             <label for="entrada-9" class="form-label text-muted  mb-1" id="label-numero"></label>
                             <input type="text" class="form-control  bg-secondary bg-opacity-25 form-control-lg w-50"
-                                id="entrada-9" maxlength="50">
+                                id="entrada-9" maxlength="4">
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
                         <div class="flex-grow-1">
                             <label for="entrada-11" class="form-label text-muted  mb-1" id="label-estado"></label>
                             <input type="text" class="form-control bg-secondary bg-opacity-25 form-control-lg w-50"
-                                id="entrada-11" maxlength="50">
+                                id="entrada-11" maxlength="2">
                         </div>
                     </div>
                 </div>
@@ -150,69 +150,117 @@
                 </div>
             </section>
             <!-- seção trilhas -->
-            <section class="trilhas ms-auto">
+            <section class="trilhas ms-auto ">
                 <!-- Programação front , back,jogos, ux, ciencia de dados -->
-                <h3 class="h3" id="title-trilhas"></h3>
+                <h3 class="h3 mb-4" id="title-trilhas"></h3>
                 <div class="mb-3">
                     <label for="class=" form label text-muted mb-1">Selecione apenas uma trilha</label>
                 </div>
-                <div class="mb-3 icons row me-3 gap-3 ms-auto">
-                    <div
-                        class="box col d-flex flex-column align-items-center justify-content-center border border-2 rounded p-3">
-                        <!-- icone front-end -->
-                        <img src="./src/assets/icons/front-end.svg" alt="">
-                        <span class="text-truncate" id="file-name">Programação Front-end</span>
-                    </div>
-                    <div
-                        class="box col d-flex d-flex flex-column align-items-center justify-content-center border border-2 rounded p-3">
-                        <!-- icone back-end -->
-                        <img src="./src/assets/icons/back-end.svg" alt="">
-                        <span class="text-truncate" id="file-name">Programação Back-end</span>
 
+                <div class="container">
+                    <div class="row g-3">
+                        <!-- Programação Front-end -->
+                        <div class="col-6">
+                            <div class="mb-3 icons d-flex flex-column align-items-center justify-content-center border border-2 rounded p-4 w-100 position-relative"
+                                id="front-end-box">
+                                <label class="position-absolute top-0 start-0 m-2">
+                                    <input type="radio" class="form-check-input" name="trilhas"
+                                        style="border-radius: 50%;">
+                                </label>
+                                <img src="./src/assets/icons/front-end.svg" alt="">
+                                <span class="" id="file-name">Programação Front-end</span>
+                            </div>
+                        </div>
+                        <!-- Programação Back-end -->
+                        <div class="col-6">
+                            <div class="mb-3 icons d-flex flex-column align-items-center justify-content-center border border-2 rounded p-4 w-100 position-relative"
+                                id="back-end-box">
+                                <label class="position-absolute top-0 start-0 m-2">
+                                    <input type="radio" class="form-check-input" name="trilhas"
+                                        style="border-radius: 50%;">
+                                </label>
+                                <img src="./src/assets/icons/front-end.svg" alt="">
+                                <span class="" id="file-name">Programação Back-end</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class=" mb-3 icons row me-3 gap-3 ms-auto">
-                    <div
-                        class="box col d-flex flex-column align-items-center justify-content-center border border-2 rounded p-3">
-                        <!-- icone front-end -->
-                        <img src="./src/assets/icons/front-end.svg" alt="">
-                        <span class="text-truncate" id="file-name">Programação de Jogos</span>
-                    </div>
-                    <div
-                        class="box col d-flex d-flex flex-column align-items-center justify-content-center border border-2 rounded p-3">
-                        <!-- icone back-end -->
-                        <img src="./src/assets/icons/back-end.svg" alt="">
-                        <span class="text-truncate" id="file-name">Design e Experiência </span>
-
+                <!-- programação jogos -->
+                <div class="container">
+                    <div class="row g-3">
+                        <!-- Programação Front-end -->
+                        <div class="col-6">
+                            <div class="mb-3 icons d-flex flex-column align-items-center justify-content-center border border-2 rounded p-4 w-100 position-relative"
+                                id="jogos-box">
+                                <label class="position-absolute top-0 start-0 m-2">
+                                    <input type="radio" class="form-check-input" name="trilhas"
+                                        style="border-radius: 50%;">
+                                </label>
+                                <img src="./src/assets/icons/icon-games.svg" alt="">
+                                <span class="" id="file-name">Programação Jogos</span>
+                            </div>
+                        </div>
+                        <!-- Programação Back-end -->
+                        <div class="col-6">
+                            <div class="mb-3 icons d-flex flex-column align-items-center justify-content-center border border-2 rounded p-4 w-100 position-relative"
+                                id="Design-experiencia-box">
+                                <label class="position-absolute top-0 start-0 m-2">
+                                    <input type="radio" class="form-check-input" name="trilhas"
+                                        style="border-radius: 50%;">
+                                </label>
+                                <img src="./src/assets/icons/icon-ux.svg" alt="">
+                                <span class="" id="file-name">Design e Experiência</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="icons row me-3 gap-3 ms-auto">
-                    <div
-                        class="box col d-flex flex-column align-items-center justify-content-center border border-2 rounded p-3">
-                        <!-- icone front-end -->
-                        <img src="./src/assets/icons/front-end.svg" alt="">
-                        <span class="text-truncate" id="file-name">Programação Front-end</span>
-                    </div>
 
+                <!-- Ciencia de dados -->
+                <div class="container mb-3">
+                    <div class="row g-3">
+                        <!-- Programação Front-end -->
+                        <div class="col-6">
+                            <div class="mb-3 icons d-flex flex-column align-items-center justify-content-center border border-2 rounded p-4 w-100 position-relative"
+                                id="ciencia-dados-box">
+                                <label class="position-absolute top-0 start-0 m-2">
+                                    <input type="radio" class="form-check-input" name="trilhas"
+                                        style="border-radius: 50%;">
+                                </label>
+                                <img src="./src/assets/icons/icon-data.svg" alt="">
+                                <span class="" id="file-name">Ciência de Dados</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </section>
             <!-- seção de segurança -->
-            <section class="seguranca">
-                <p>declaro que li e concordo com os <strong>Termos e Condições</strong> e com a <strong>Politica de
-                        privacidade</strong></p>
+            <section class="seguranca mb-5">
+                <div class="d-flex justify-content-center align-items-center mb-3" >
+                    <input type="checkbox" class="form-check-input mb-4" name="trilhas" style="border-radius: 5%; margin-right: 2vh;">
+                    <p class="mb-3" style="display: inline-block; margin: 0;">Declaro que li e concordo com os 
+                        <strong style="color: #e43a12;">Termos e Condições</strong> e com a 
+                        <strong style="color: #e43a12;">Política de Privacidade</strong>
+                    </p>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button id="cancelar" class="btn btn-outline-orange me-2">Cancelar</button>
+                    <button id="inscricao" class="btn btn-orange">Fazer inscrição</button>
+                </div>
 
-                <!-- botão de cancelaj e fazer a inscrição -->
+                <!-- botão de cancelar e fazer a inscrição -->
             </section>
         </section>
 
-    <!-- imagem fora do main -->
-    <div class="image-ilustracao">
-        <img src="./src/assets/image/ilustracao.png" class="ilustracao img-fluid" alt="Ilustração">
-        <img src="./src/assets/icons/group-trilhas.svg" class="logo-trilhas" alt="">
-    </div>
+        <!-- imagem fora do main -->
+        <div class="image-ilustracao">
+            <img src="./src/assets/image/ilustracao.png" class="ilustracao img-fluid" alt="Ilustração">
+            <img src="./src/assets/icons/group-trilhas.svg" class="logo-trilhas" alt="">
+        </div>
 
-</main>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./app.js"></script>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./app.js"></script>
 </body>
+
 </html>
