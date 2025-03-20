@@ -70,7 +70,7 @@ tituloTrilhas.textContent = "Trilhas de Aprendizagem";
 
 
 
-function validador(){
+function formatador(){
     let telefoneInput = document.getElementById('entrada-6');
     let cpfInput = document.getElementById('entrada-3');
 
@@ -109,7 +109,7 @@ cpfInput.addEventListener("input", function (e) {
     });
 }
 
-validador();
+formatador();
 
 // Seleciona a caixa de "Programação Front-end"
 function trilhasCheck() {
