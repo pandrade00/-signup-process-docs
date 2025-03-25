@@ -131,7 +131,5 @@ telefoneInput.addEventListener('input', function (e) {
 }
 
 
-
+// chamando função
 formatador();
-
-  
